@@ -1,0 +1,211 @@
+:root {
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-2xl: 1.875rem; /* 30px */
+  --font-size-3xl: 2.25rem; /* 36px */
+
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+
+  --font-family-serif: "Merriweather", "Times New Roman", Georgia, serif;
+  --font-family-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Fira Code", monospace;
+
+  --color-text: #1a1e24;
+  --color-text-light: #5b677d;
+  --color-accent: #a8413b;
+  --color-bg-quote: #f9f6f0;
+  --color-border: #e2e8f0;
+}
+
+/* Глобальный сброс и вертикальный ритм */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+/* Заголовки с индивидуальными пропорциями */
+.title {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.heading2 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  letter-spacing: -0.01em;
+}
+
+/* Эпиграф */
+.epigraph {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-light);
+  text-align: right;
+  margin: 2rem 0 2.5rem;
+  padding-right: 1rem;
+  border-right: 3px solid var(--color-border);
+}
+
+.epigraphAuthor {
+  font-style: italic;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+/* Абзацы – вертикальный ритм */
+.paragraph {
+  text-align: justify;
+  margin-bottom: 1.2rem;
+  text-indent: 1.5em; /* Красная строка для художественного текста */
+}
+
+/* Нестандартная буквица (dropcap) */
+.dropcap {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 0.85;
+  margin-right: 0.5rem;
+  color: var(--color-accent);
+  font-family: var(--font-family-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Акценты */
+.italic {
+  font-style: italic;
+  background: linear-gradient(120deg, #fef9e6 0%, #fef9e6 40%, transparent 60%);
+  padding: 0 0.2rem;
+}
+
+.strong {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.mark {
+  background-color: #fff3c9;
+  padding: 0 0.1rem;
+  border-radius: 3px;
+  color: #5e3a1f;
+}
+
+/* Цитата */
+.quote {
+  margin: 1.8rem 0;
+  padding: 1rem 1.5rem;
+  background: var(--color-bg-quote);
+  border-left: 6px solid var(--color-accent);
+  font-style: italic;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  border-radius: 0 12px 12px 0;
+  text-align: left;
+}
+
+.quoteFooter {
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family-sans);
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+/* Списки */
+.list {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: square;
+  text-align: left;
+}
+
+.listOrdered {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.listItem {
+  margin-bottom: 0.4rem;
+  line-height: var(--line-height-base);
+}
+
+.nestedList {
+  margin-top: 0.4rem;
+  margin-bottom: 0.2rem;
+  padding-left: 1.5rem;
+  list-style-type: circle;
+}
+
+/* Ссылка */
+.link {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+  transition:
+    border 0.2s,
+    color 0.2s;
+}
+
+.link:hover {
+  color: #7a2e29;
+  border-bottom-style: solid;
+}
+
+/* Мелкий текст */
+.small {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-family: var(--font-family-sans);
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .heading2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .quote {
+    padding: 0.75rem 1rem;
+  }
+
+  .dropcap {
+    font-size: 2.8rem;
+  }
+}

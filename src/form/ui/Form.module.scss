@@ -1,0 +1,159 @@
+/* Form.module.css */
+.form {
+  margin: 2rem auto;
+  padding: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  text-align: left;
+}
+
+.defaultBlock,
+.additionalBlock {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 200px 10px 300px;
+}
+
+.additionalBlock {
+  background-color: #fad681;
+  box-shadow:
+    inset 0 3px 1px rgba(255, 255, 255, 0.5),
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #1e1e2f;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+  max-width: 400px;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 7px;
+  transform: translateX(calc(-100% - 20px));
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  max-width: 450px;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #4d96ff;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.additionalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  position: relative;
+  z-index: 1;
+}
+
+.radioGroup {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.radioCheckbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  // Кастомный круг
+  .customRadio {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: white;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  // При checked - меняем фон и добавляем точку
+  input:checked + .customRadio {
+    border-color: #4d96ff;
+    background: #4d96ff;
+    box-shadow: inset 0 0 0 2px white; // внутренняя точка
+  }
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  align-items: start;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 400;
+
+  input {
+    transform: translateY(5px);
+  }
+}
+
+.submitButton {
+  background: linear-gradient(
+    180deg,
+    rgb(132, 84, 222) 0%,
+    rgb(96, 48, 186) 100%
+  );
+  font-size: 16px;
+  font-family: "Segoe UI", sans-serif;
+  color: #ececec;
+  font-weight: bold;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+  max-width: 400px;
+}
