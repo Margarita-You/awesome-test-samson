@@ -53,7 +53,7 @@ function App() {
         <ProductSlider products={products} />
       </ExpandableText>
 
-      <a href='/black-page.html' style={{ padding: "20px" }}>
+      <a href={`${import.meta.env.BASE_URL}black-page.html`} style={{ padding: "20px" }}>
         Черная страница
       </a>
 
