@@ -1,1 +1,2 @@
-export { ColorSelect, colors } from "./ColorSelect"
+export { ColorSelect } from "./ColorSelect"
+export { colors } from "./colors"

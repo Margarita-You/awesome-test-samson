@@ -196,7 +196,7 @@ export const ToggleSwitch: React.FC<Props> = ({ defaultEnabled, onChange }) => {
 
   const animate = (now: number) => {
     const elapsed = now - startTime.current
-    let t = Math.min(1, elapsed / DURATION)
+    const t = Math.min(1, elapsed / DURATION)
     const ease = 1 - Math.pow(1 - t, 3)
     const newOffset =
       startOffset.current + (targetOffset.current - startOffset.current) * ease
