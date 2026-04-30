@@ -62,8 +62,7 @@ export const Form: React.FC = () => {
       <h2 className={styles.title}>Заполните форму</h2>
       <form className={styles.form} onSubmit={handleSubmit} autoComplete='off'>
         <div className={styles.defaultBlock}>
-          <h2 className={styles.sectionTitle}>Основное</h2>
-
+          <h3 className={styles.sectionTitle}>Основное</h3>
           <Input
             label='Имя'
             id='name'
@@ -72,9 +71,8 @@ export const Form: React.FC = () => {
             maxLength={50}
             onChange={handleNameChange}
           />
-
           <div className={styles.field}>
-            <label className={styles.label}>Цвет вашего настроения</label>
+            <label id='' className={styles.label}>Цвет вашего настроения</label>
             <ColorSelect
               selectedColor={formData.moodColor}
               onColorChange={handleColorChange}
@@ -93,7 +91,6 @@ export const Form: React.FC = () => {
           />
         </div>
 
-        {/* Продолжение основного блока */}
         <div className={styles.defaultBlock}>
           <FakeRadio
             label='Просто радиобатон'

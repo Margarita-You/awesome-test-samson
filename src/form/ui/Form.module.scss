@@ -104,7 +104,6 @@
     height: 0;
   }
 
-  // Кастомный круг
   .customRadio {
     width: 12px;
     height: 12px;
@@ -156,4 +155,16 @@
   width: 100%;
   margin-top: 0.5rem;
   max-width: 400px;
+}
+
+@media (max-width: 740px) {
+  .label {
+  position: static;
+  margin-bottom: 5px;
+}
+
+.defaultBlock,
+.additionalBlock {
+  padding: 40px;
+}
 }

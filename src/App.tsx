@@ -1,5 +1,6 @@
-import style from "./App.module.css"
+import style from "./App.module.scss"
 import { BeautifulButton } from "./beautifulButton"
+import { ToggleSwitch } from "./beautifulToggle"
 import { ExpandableText } from "./expandableText"
 import { Form } from "./form"
 import { ButtonArrow, JustButton } from "./justButtons"
@@ -61,6 +62,10 @@ function App() {
         <div className={style.buttonWrapper}>
           <BeautifulButton>Кнопка</BeautifulButton>
         </div>
+      </ExpandableText>
+
+            <ExpandableText text='Красивый тогл'>
+                <ToggleSwitch defaultEnabled={false}/>
       </ExpandableText>
     </div>
   )
