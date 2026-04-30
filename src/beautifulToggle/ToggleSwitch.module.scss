@@ -1,0 +1,10 @@
+.toggleContainer {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.canvas {
+  display: block;
+  margin: 0 auto;
+  background: transparent; /* чтобы желоб рисовался поверх родительского фона */
+}

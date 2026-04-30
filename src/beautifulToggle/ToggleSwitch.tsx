@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import styles from "./ToggleSwitch.module.css"
+import styles from "./ToggleSwitch.module.scss"
 
 type Props = {
   defaultEnabled: boolean

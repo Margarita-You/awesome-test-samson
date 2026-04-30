@@ -5,7 +5,7 @@ import { ExpandableText } from "./expandableText"
 import { Form } from "./form"
 import { ButtonArrow, JustButton } from "./justButtons"
 import { products, ProductSlider } from "./productSlider"
-import { Scheme } from "./scheme/Scheme"
+import { Scheme } from "./scheme"
 import { TypographyDemo } from "./typography/TypographyDemo"
 
 function App() {

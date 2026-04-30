@@ -1,4 +1,3 @@
-// ProductSlider.tsx
 import React, { useRef, useState } from "react"
 import styles from "./ProductSlider.module.scss"
 
@@ -63,9 +62,8 @@ export const ProductSlider: React.FC<ProductSliderProps> = ({ products }) => {
             </div>
           ))}
         </div>
-        {/* Градиент в конце строки */}
-        <div className={styles.gradientOverlay} />
       </div>
+      <div className={styles.gradientOverlay} />
     </div>
   )
 }

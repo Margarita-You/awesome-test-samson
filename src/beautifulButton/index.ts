@@ -1,1 +1,1 @@
-export { Button as BeautifulButton } from "./ui/Button"
+export { Button as BeautifulButton } from "./Button"
