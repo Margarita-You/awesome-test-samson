@@ -159,12 +159,12 @@
 
 @media (max-width: 740px) {
   .label {
-  position: static;
-  margin-bottom: 5px;
-}
+    position: static;
+    margin-bottom: 5px;
+  }
 
-.defaultBlock,
-.additionalBlock {
-  padding: 40px;
-}
+  .defaultBlock,
+  .additionalBlock {
+    padding: 40px;
+  }
 }

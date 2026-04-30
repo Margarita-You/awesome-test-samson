@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['master']  # Запускать при пушах в main
-  workflow_dispatch:    # Даёт возможность запустить вручную из интерфейса GitHub
+    branches: ["master"] # Запускать при пушах в main
+  workflow_dispatch: # Даёт возможность запустить вручную из интерфейса GitHub
 
 permissions:
   contents: read
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci # Используйте npm ci для быстрой и надёжной установки
@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Путь к папке со сборкой
+          path: "./dist" # Путь к папке со сборкой
 
   deploy:
     environment:
