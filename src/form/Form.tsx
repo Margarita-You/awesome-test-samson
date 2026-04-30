@@ -103,7 +103,10 @@ export const Form: React.FC = () => {
             label={
               <span>
                 Соглашаюсь на все, что бы вы ни придумали и осознаю, что это
-                может означать <a href='#'>что угодно</a>
+                может означать{" "}
+                <a href='#' onClick={(e) => e.stopPropagation()}>
+                  что угодно
+                </a>
               </span>
             }
             checked={formData.subscribe}
