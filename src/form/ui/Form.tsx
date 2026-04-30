@@ -1,4 +1,3 @@
-// Form.tsx (оптимизированная версия)
 import React, { useState, useCallback } from "react"
 import { ColorSelect, colors } from "./colorSelect"
 import styles from "./Form.module.scss"
@@ -72,13 +71,9 @@ export const Form: React.FC = () => {
             onChange={handleNameChange}
           />
           <div className={styles.field}>
-<<<<<<< HEAD
-            <label id='' className={styles.label}>Цвет вашего настроения</label>
-=======
             <label id='' className={styles.label}>
               Цвет вашего настроения
             </label>
->>>>>>> b3cffa4 (beatiful switch and some fixes)
             <ColorSelect
               selectedColor={formData.moodColor}
               onColorChange={handleColorChange}
